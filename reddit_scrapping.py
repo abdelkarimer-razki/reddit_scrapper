@@ -35,5 +35,5 @@ data = pd.DataFrame(dic)
 data['comments_per_upvotes'] = data['num_comments'] / data['ups']
 data = data.sort_values(by=['num_comments', 'comments_per_upvotes','upvote_ratio', 'ups'], ascending=[False ,False, False, False])
 
-data.to_excel(f"data_{community}.xlsx", mode="w", encoding='utf-8-sig', index=False)
+data.to_excel(f"docs/data_{community}.xlsx", mode="w", encoding='utf-8-sig', index=False)
 print(f"Excel file exported successfully - contains {len(data)} lines")
